@@ -154,59 +154,17 @@ app.use(helmet.noSniff()); //remove snif
 app.use(helmet.ieNoOpen()); //no dwnl	
 app.use(helmet.hsts({maxAge:90*24*3600, force:true}));  ///https for maxAge time
 app.use(helmet.dnsPrefetchControl()); //-performanance + security
-/*
-
 app.use(helmet.contentSecurityPolicy({directives:
   {
     defaultSrc:["'self'"],
-    scriptSrc:["'self'","https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js","https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js","'nonce-abc'","'sha512-uF4d0PpYxHTa47dm23dMT2NRGXAxZTlFERAeFIjyJIlU4oWBTJ91jIpEyNmtEvFIMQHw1Y8X9/GWMTXkW9jqHA=='","'sha256-LZGZeWKeYCt9psIZQs5aBlfqMesaJv4aG34ZOfJfJnc='","https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"],
+    scriptSrc:["'self'","https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js","https://polyfill.io/v3/polyfill.min.js","https://*.googleapis.com","https://*.gstatic.com","*.google.com","*.googleusercontent.com","https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"],
     fontSrc:["'self'","fonts.gstatic.com"], 
-    styleSrcElem:["'self'","https://fonts.googleapis.com","https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"],
-    styleSrc:["'self'","'sha256-16sQzrmWPpOd+zM5yo8QT8+8uBYK4kxJ/mUgXOy7SFw='"],
-    connectSrc:["https://d35p9e4fm9h3wo.cloudfront.net/latestData.json"]
+    styleSrcElem:["'self'","https://fonts.googleapis.com","'unsafe-inline'"],
+    styleSrc:["'self'","'unsafe-inline'"],
+    frameSrc:["'self'","*.google.com"],
+    connectSrc:["'self'","https://*.googleapis.com","*.google.com","https://*.gstatic.com"],
+    imgSrc:["'self'","data:","blob:","*.googleapis.com","maps.google.com","maps.gstatic.com","www.gstatic.com","*.ggpht.com"]
   }}));
-  */
-//send
-/*
-router.post("/contact/send",async function(req,res){
-  console.log(req.body.message);
-  var transporter = nodemailer.createTransport({
-    host: "smtp.mailtrap.io",
-    port: 2525,
-    auth: {
-      user: "926851a8c45ffb",
-      pass: "b0403d8cabd5e8"
-    }
-  });
-  await transporter.sendMail({
-    from: '"Fred Foo ðŸ‘»" <foo@example.com>', // sender address
-    to: "bar@example.com, baz@example.com", // list of receivers
-    subject: req.body.uname+"send a message", // Subject line
-    text: req.mail+"said: "+ req.msg, // plain text body
-    html: "<b>Hello world?</b>", // html body
-  }).then(() => res.redirect('/'));
-  return res.redirect("/");
-});
-router.post("/",async function(req,res){
-  var transporter = nodemailer.createTransport({
-    host: "smtp.mailtrap.io",
-    port: 2525,
-    auth: {
-      user: "926851a8c45ffb",
-      pass: "b0403d8cabd5e8"
-    }
-  });
-  await transporter.sendMail({
-    from: '"Fred Foo ðŸ‘»" <foo@example.com>', // sender address
-    to: "bar@example.com, baz@example.com", // list of receivers
-    subject: "Hello âœ”", // Subject line
-    text: "Hello world?", // plain text body
-    html: "<b>Hello world?</b>", // html body
-  }).then(() => res.redirect('/'));
-  return res.redirect("/");
-});
-//add the router
-*/
 app.use('/', router);
 app.listen(2119);
 console.log('Running at Port 2119');

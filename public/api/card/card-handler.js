@@ -229,14 +229,15 @@ for(element of form){
 }
 async function redirect(event){
     event.preventDefault()
-    const name='Universitatea Politehnica din Bucuresti'
-    const result=await fetch('/api/search-data',{
+    const name="Universitatea Politehnica din Bucuresti"
+    const name2="Facultatea de Business Cluj"
+        const result=await fetch('/api/search-data',{
         method:'POST',
         headers:{
             'Content-Type':'application/json'
         },
         body: JSON.stringify({
-          Name:name
+          Name:name2
         })
     }).then((res)=>res.json());
     localStorage.setItem('location',result.data.Location)
