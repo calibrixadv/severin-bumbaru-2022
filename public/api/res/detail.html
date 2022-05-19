@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Lab</title>
+    <link rel="stylesheet" href="scss/detail/detail.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logo.svg">
+</head>
+<body>
+    <div class="container">
+        <div id="nav-bar" class="ctn">
+            <div id="logo">
+                <img src="images/Logo.svg">
+            </div>
+            <div id="nav-items" class="deactive">
+                <a href="/home">Home</a>
+                <a href="/cv">CV</a>
+                <a href="/contact-us">Contact us</a>
+                <a href="/about-us">About us</a>
+            </div>
+            <img id='blob-phn' class="phone deactive" src="/images/blob2.svg"> 
+            <a id="nav-icon" class="phone"><img src="/images/nav-menu.svg"></a>
+            <a id="nav-arrow" class="phone deactive"><img src="/images/nav-arrow.svg"></a>
+            <div id="nav-cc"class="phone deactive">
+                <p id='black'class="text">©2022 2119 Media Studio</p>
+            </div>
+        </div>
+        <div id="main" class="ctn">
+            <div id="first-nest"class="column-ctn">
+                <a href="/home" id="arrow" class="deactive"><img src="/images/arrow.svg"></a>
+                <div id="second-nest" class="row-ctn">
+                    <div id="target"class="column-ctn">
+                        <div id="img-wrapper"><img src="/images/stock2.svg"></div>
+                        <p id="location" class="text"></p>
+                        <p id="service" class="text"></p>
+                        <p id="contact" class="text"></p>
+                        <p id="site" class="text"></p>
+                        <div id="map"></div>
+                    </div>
+                    <img id="bar"src="/images/bar.svg" class="deactive">
+                    <div id="third-nest" class="column-ctn">
+                        <p id="name" class="text bolded"></p>
+                        <p id="info" class="text"></p>
+                        <div class="row-ctn" id="forth-nest">
+                            <a class="button-wrapper" href="https://www.upb.ro"><div class="button"><p> GO TO THE OFFICIAL SITE</p></div></a>
+                            <a class="button-wrapper" href="/api/res/ghid.pdf"><div class="button" id="last-ctn"><p>ADMISSION GUIDE</p><img src="/images/download.svg"></div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/api/card/render-handler.js"></script>
+    <script src="/api/phone/phone-handler.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6Qt6ue1E-Yihr7sqipQ8E8GyqMq7NFY0&callback=initMap"></script>
+
+</body>
+</html>

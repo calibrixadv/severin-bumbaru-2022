@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Lab</title>
+    <link rel="stylesheet" href="scss/cv/cv.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="nav-bar" class="ctn">
+            <div id="logo">
+                <img src="images/Logo.svg">
+            </div>
+            <div id="nav-items" class="deactive">
+                <a href="/home">Home</a>
+                <a href="/cv">CV</a>
+                <a href="/contact-us">Contact us</a>
+                <a href="/about-us">About us</a>
+            </div>
+            <img id='blob-phn' class="phone deactive" src="/images/blob2.svg"> 
+            <a id="nav-icon" class="phone"><img src="/images/nav-menu.svg"></a>
+            <a id="nav-arrow" class="phone deactive"><img src="/images/nav-arrow.svg"></a>
+            <div id="nav-cc"class="phone deactive">
+                <p id='black'class="text">©2022 2119 Media Studio</p>
+            </div>
+        </div>
+        <div id="main" class="column-ctn ctn">
+            <div id="first-nest"class="row-ctn">
+                <a href="/home" id="arrow"><img src="/images/arrow.svg"></a>
+                <p id="title" class="text bolded">My CV</p>
+            </div>
+            <div id="second-nest"class="row-ctn">
+                <div id="third-nest"class="column-ctn">
+                    <p id="username" contenteditable="true" class="bolded">YOUR FULL NAME</p>
+                    <p id="qualification" contenteditable="true">YOUR QUALIFICATION</p>
+                </div>
+                <form id="upload-photo">
+                    <input type="file" id="input-photo" accept=".png,.svg,.jpg,.jpeg" class="hidden">
+                    <label for="input-photo" id="label"><img id="avatar"src="/images/avatar.svg"></label>
+                </form>
+            </div>
+           <div id="body" class="row-ctn">
+               <div id="forth-nest"class="column-ctn">
+                   <div id="about" class="wrap">
+                       <p class="title-txt">About</p>
+                       <p class="write-ctn"contenteditable="true" id="about-data">Type here..</p>
+                   </div>
+                   <div id="experience" class="wrap">
+                       <p class="title-txt">Experience</p>
+                       <p class="write-ctn"contenteditable="true" id="experience-data">Type here..</p>
+                   </div>
+                   <div id="education" class="wrap">
+                       <p class="title-txt">Education</p>
+                       <p class="write-ctn"contenteditable="true">Type here..</p>
+                   </div>
+               </div>
+               <div id="fifth-nest"class="column-ctn">
+                   <div id="interests" class="wrap">
+                       <p class="title-txt">Interests</p>
+                       <p class="write-ctn"contenteditable="true">Type here..</p>
+                   </div>
+                   <div id="skills" class="wrap">
+                       <p class="title-txt">Skills</p>
+                       <p class="write-ctn"contenteditable="true">Type here..</p>
+                   </div>
+                   <div id="contact" class="wrap">
+                       <p class="title-txt">Contact</p>
+                       <p class="write-ctn"contenteditable="true">Type here..</p>
+                   </div>
+               </div>
+           </div>
+        </div>
+        <div id="footer" class="row-ctn">
+            <a class="button-wrapper" href="#"><div class="button" id="qr"><p>Generate QR Code</p><img src="/images/qr.svg"></div></a>
+            <a class="button-wrapper" href="#"><div class="button" id="last-ctn"><p>Download it</p><img src="/images/download.svg"></div></a>
+        </div>
+    </div>
+    <script src="/api/cv/cv-handler.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</body>
+</html>
