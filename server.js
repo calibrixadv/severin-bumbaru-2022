@@ -160,7 +160,7 @@ app.use(helmet.contentSecurityPolicy({directives:
     scriptSrc:["'self'","https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js","https://polyfill.io/v3/polyfill.min.js","https://*.googleapis.com","https://*.gstatic.com","*.google.com","*.googleusercontent.com","https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"],
     fontSrc:["'self'","fonts.gstatic.com"], 
     styleSrcElem:["'self'","https://fonts.googleapis.com","'unsafe-inline'"],
-    styleSrc:["'self'","'unsafe-inline'"],
+    styleSrc:["'self'","'unsafe-inline'","fonts.googleapis.com"],
     frameSrc:["'self'","*.google.com"],
     connectSrc:["'self'","https://*.googleapis.com","*.google.com","https://*.gstatic.com"],
     imgSrc:["'self'","data:","blob:","*.googleapis.com","maps.google.com","maps.gstatic.com","www.gstatic.com","*.ggpht.com"]
